@@ -5,8 +5,8 @@ def index():
     return render_template('index.html')
 @app.route('/submit',methods=['POST'])
 def submit():
-    username = request.form['username']
+    username = request.form['uname']
     password = request.form['password']
-    return render_template('greeting.html', username=username, password=password)
+    return render_template('greeting.html', username=uname, password=password)
 if __name__ == '__main__':
     app.run(debug=True)
